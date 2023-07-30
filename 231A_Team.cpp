@@ -5,7 +5,7 @@ int main(void){
 int n = 0;
 int a = 0;
 int b = 0;
-int c = 0;
+int c;
 int sol = 0;
 
 cin >> n;
