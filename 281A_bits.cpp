@@ -8,14 +8,17 @@ int main(){
     
 for(int i = 0; i < n; i++){
     string value;
-    cin >> value[i];
-    if(value[i] == 'x'){
-        continue;
-    }else if(value[i] == '+'){
-        result++;
-    }else if(value [i] == '-'){
-        result--;
-    }
+    cin >> value;
+	
+	for(int j = 0; j <=3; j++){
+    	if(value[j] == '+'){
+        	result++;
+			break;
+    	}else if(value [j] == '-'){
+        	result--;
+			break;
+    	}
+	}
 }
     cout << result << endl;
     return 0;
