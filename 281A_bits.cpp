@@ -6,14 +6,16 @@ int main(){
     cin >> n;
     int result = 0;
     
-    for(int i = 0; i < n; i++){
-        vector <string> value(3);
-        if (value[1] == "+"){
-            result++;
-        }
-        else if(value [1] == "-"){
-            result--;
-        }
+for(int i = 0; i < n; i++){
+    vector <string> value(3);
+    cin >> value[i];
+    if (value[i][1] == '+'){
+        result++;
     }
+    else if(value [i][1] == '-'){
+        result--;
+    }
+}
+    cout << result << endl;
     return 0;
 }
