@@ -7,12 +7,13 @@ int main(){
     int result = 0;
     
 for(int i = 0; i < n; i++){
-    vector <string> value(3);
+    vector <string> value;
     cin >> value[i];
-    if (value[i][1] == '+'){
+    if(value[i][i] == 'x'){
+        continue;
+    }else if(value[i][i] == '+'){
         result++;
-    }
-    else if(value [i][1] == '-'){
+    }else if(value [i][i] == '-'){
         result--;
     }
 }
