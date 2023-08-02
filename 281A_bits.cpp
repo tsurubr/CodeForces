@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-using namespace std
+using namespace std;
 
 int main(){
     int n = 0;
@@ -7,12 +7,13 @@ int main(){
     int result = 0;
     
     for(int i = 0; i < n; i++){
-        vector <string> value;
-        if (value[1] || value[0] == '+'){
+        vector <string> value(3);
+        if (value[1] == "+"){
             result++;
         }
-        else if(value [1] || value[2] == "-"){
-            result++;
+        else if(value [1] == "-"){
+            result--;
         }
     }
+    return 0;
 }
