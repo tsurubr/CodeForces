@@ -10,7 +10,7 @@ int main() {
     cin >> rooms;
     for (int i =0; i < rooms; i++){
         cin >> people >> capacity;
-        if (people + 1 <= capacity){
+        if (people + 2 <= capacity){
             result++;
         }
     }
