@@ -5,6 +5,8 @@ int main(){
     int alex = 0;
     int bob = 0;
     int count = 0;
+    
+    cin >> alex >> bob;
 
     if (alex <= bob){
         alex = alex * 3; 
