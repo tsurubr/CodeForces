@@ -5,16 +5,15 @@ int main(){
     int alex = 0;
     int bob = 0;
     int count = 0;
-    
-    cin >> alex >> bob;
 
-    if (alex <= bob){
-        alex = alex * 3; 
-        bob = bob * 2;
-        count++;
-    } else{
-        cout << count;
-    }
+    cin >> alex >> bob;
+    do {
+    alex = alex * 3; 
+    bob = bob * 2;
+    count++;
+    } while (alex <= bob);
+
+    cout << count;
 
     return 0;
 }
