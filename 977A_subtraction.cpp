@@ -8,8 +8,8 @@ int main(){
 
     cin >> numero >> vezes;
     for (int i = 0; i < vezes; i++){
-        if(numero % 10){
-            numero = numero /10;
+        if(numero % 10 == 0){
+            numero = numero / 10;
         }
         else{
             numero--;
