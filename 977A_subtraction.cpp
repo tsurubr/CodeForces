@@ -15,5 +15,6 @@ int main(){
             numero--;
         }
     }
+    cout << numero;
 return 0;
 }
