@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ 
+int main (){
+	ios_base::sync_with_stdio(0); 
+	cin.tie(0); cout.tie(0);
+	ll n, m; cin >> n >> m;
+	
+	vector<vector<ll>> v(n, vector<ll>(4, 0));
+	ll c = 0;
+	for(ll i = 1, l = 0; i <= min(m, 2 * n); i++){
+		if(i % 2){
+			v[l][c] = i;
+			c = 3; 
+		}else{
+			v[l][c] = i;
+			l++;
+			c = 0;
+		}
+	}
+	c = 1; 
+	for(ll i = 2 * n + 1, l = 0; i <= m; i++){	
+		if(i % 2){
+			v[l][c] = i;
+			c = 2; 
+		}else{
+			v[l][c] = i;
+			l++;
+			c = 1;
+		}
+	}
+	c = 1;
+	for(ll i = 1, l = 0; i <= 4 * n; i++){
+		if(i % 4 == 1){
+			if(v[l][c])
+				cout << v[l][c] << " ";
+			c = 0;
+		}else if(i % 4 == 2){
+			if(v[l][c])
+				cout << v[l][c] << " ";
+			c = 2;
+		}else if(i % 4 == 3){
+			if(v[l][c])
+				cout << v[l][c] << " ";
+			c = 3;
+		}else{
+			if(v[l][c])
+				cout << v[l][c] << " ";
+			c = 1;
+			l++;
+		}
+	}
+}

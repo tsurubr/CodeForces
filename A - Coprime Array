@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main (){
+int num = 0;
+int count = 0;
+ 
+cin >> num;
+vector <int> elements(num);
+	
+for(int i =0; i < num; i++){
+	cin >> elements[i];
+}
+for(int j = 1; j < num; j++){
+	if(__gcd(elements[j-1], elements[j]) > 1){
+	count++;
+	}
+}
+cout << count << endl;
+for(int j = 1; j < num; j++){
+	cout << elements[j-1] << " ";
+	if(__gcd(elements[j-1], elements[j]) > 1){
+	cout << 1 << " ";
+	}
+}
+cout << elements.back();
+return 0;
+}
