@@ -1,16 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int n = 0, m = 0, a = 0;
-    int i = 0;
+int main() {
+    double n, m, a;
     cin >> n >> m >> a;
-    int theatre = n * m;
-    int flagstone = a * a;
-	
-    do{
-		i++;
-        flagstone *= i;
-    }while(theatre > flagstone);
-    cout << i;
+
+    int row = ceil(n / a);
+    int col = ceil(m / a);
+    long long flagstone = row * col;
+    cout << flagstone << endl;
+
+    return 0;
 }
