@@ -1,26 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main (){
-    int t;
-    cin >> t;
-
-    while (t--) {
-        long long n;
-        cin >> n;
-
-        long long answer = n;
-        for (long long i = 2; i * i <= n; ++i) {
-            while (n % i == 0) {
-                answer = i;
-                n /= i;
-            }
+int main()
+{
+    int num;
+    cin >> num;
+    int count = 0;
+    while (num != 0)
+    {
+        if (num % 10 == 4 || num % 10 == 7)
+        {
+            count += 1;
         }
-
-        if (n > 1) {
-            answer = n;
-        }
-        cout << answer << endl;
+        num = num / 10;
+    }
+    if (count == 4 || count == 7)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
     }
     return 0;
 }
