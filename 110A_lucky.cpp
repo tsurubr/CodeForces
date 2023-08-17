@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int num;
+    long long num;
     cin >> num;
     int count = 0;
     while (num != 0)
@@ -14,6 +14,7 @@ int main()
         }
         num = num / 10;
     }
+
     if (count == 4 || count == 7)
     {
         cout << "YES" << endl;
