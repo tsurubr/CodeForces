@@ -5,7 +5,7 @@ int main(){
     string a, b;
 	cin >> a >> b;
 	
-	for(int i = 0; i < a.size(); i++){
+	for(int i = 0; i < int(a.size()); i++){
 		if(a[i] <  92){
             a[i] += 32;
         }
