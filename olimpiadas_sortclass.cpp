@@ -43,10 +43,11 @@ int main(){
 		pais[b].bronze++;
 	}
 	
-	sort(pais+1, pais+n+1, maior); //ignorando o indice 0 do vetor pais
+	sort(pais+1, pais+n+1, maior); // ignorando o indice 0 do vetor pais
 	
 	for(int i=1;i<=n;i++){
     	cout<< pais[i].id << " ";
   	}
+	
     return 0;
 }
